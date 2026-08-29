@@ -654,11 +654,12 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); color: var(--text); f
 }
 
 .terminal-body {
-  padding: 18px;
+  padding: 16px;
   font-family: var(--mono);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   line-height: 1.65;
-  overflow-x: auto;
+  overflow-x: hidden;
+  word-break: break-word;
 }
 .t-line { margin-bottom: 6px; color: #cbd5e1; }
 .t-prompt { color: #f59e0b; font-weight: 700; }
@@ -668,9 +669,12 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); color: var(--text); f
   border-radius: var(--radius-sm);
   padding: 10px 12px;
   margin-bottom: 12px;
-  overflow-x: auto;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-wrap;
   color: #e2e8f0;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
 }
 .t-key { color: #f472b6; }
 .t-str { color: #a3e635; }
@@ -982,7 +986,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); color: var(--text); f
 }
 
 .project-thumb-frame {
-  height: 180px;
+  height: 150px;
   position: relative;
   overflow: hidden;
   background: #1c1e24;
