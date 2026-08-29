@@ -1,6 +1,6 @@
 /* ============================================================
    main.js — Pankaj Kumar Portfolio
-   Interactive features, Typewriter, Modal & Filtering
+   Smooth Horizontal Slider, Typewriter & 120 FPS Interaction
 ============================================================ */
 
 /* ---- Navbar Scroll & Active State ---- */
@@ -10,10 +10,9 @@ const sections = document.querySelectorAll('section[id]');
 
 window.addEventListener('scroll', () => {
   if (navbar) {
-    navbar.classList.toggle('scrolled', window.scrollY > 30);
+    navbar.classList.toggle('scrolled', window.scrollY > 25);
   }
 
-  // Active section spy
   let current = '';
   sections.forEach(section => {
     const sectionTop = section.offsetTop - 120;
@@ -25,7 +24,7 @@ window.addEventListener('scroll', () => {
 
   navLinks.forEach(link => {
     link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) {
+    if (link.getAttribute('href') === '#' + current) {
       link.classList.add('active');
     }
   });
@@ -74,22 +73,22 @@ function typeEffect() {
     charIndex++;
   }
 
-  let typeSpeed = isDeleting ? 45 : 100;
+  let typeSpeed = isDeleting ? 45 : 95;
 
   if (!isDeleting && charIndex === currentWord.length) {
-    typeSpeed = 1800; // Pause at end of word
+    typeSpeed = 1900;
     isDeleting = true;
   } else if (isDeleting && charIndex === 0) {
     isDeleting = false;
     wordIndex = (wordIndex + 1) % typewriterWords.length;
-    typeSpeed = 400; // Pause before typing new word
+    typeSpeed = 400;
   }
 
   setTimeout(typeEffect, typeSpeed);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(typeEffect, 400);
+  setTimeout(typeEffect, 300);
 });
 
 /* ---- Intersection Observer (Scroll Reveals) ---- */
@@ -101,18 +100,17 @@ const io = new IntersectionObserver((entries) => {
       io.unobserve(e.target);
     }
   });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+}, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 
-// Trigger hero elements immediately
 document.querySelectorAll('#hero .reveal, #hero .reveal-right').forEach(el => {
-  setTimeout(() => el.classList.add('visible'), 100);
+  setTimeout(() => el.classList.add('visible'), 80);
 });
 
 revealEls.forEach(el => {
   if (!el.closest('#hero')) io.observe(el);
 });
 
-/* ---- Animated Counters (Terminal & Stats) ---- */
+/* ---- Animated Counters ---- */
 const counterEls = document.querySelectorAll('[data-target]');
 const counterObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -130,12 +128,91 @@ const counterObserver = new IntersectionObserver((entries) => {
       counterObserver.unobserve(el);
     }
   });
-}, { threshold: 0.4 });
+}, { threshold: 0.3 });
 counterEls.forEach(el => counterObserver.observe(el));
+
+/* ---- HORIZONTAL PROJECTS SIDE-SCROLL CAROUSEL ENGINE ---- */
+const track = document.getElementById('projects-track');
+const prevBtn = document.getElementById('carousel-prev');
+const nextBtn = document.getElementById('carousel-next');
+const dotsContainer = document.getElementById('carousel-dots');
+const projectCards = document.querySelectorAll('.project-card');
+
+let isHovered = false;
+
+// Render pagination dots
+if (dotsContainer && projectCards.length > 0) {
+  dotsContainer.innerHTML = '';
+  projectCards.forEach((_, idx) => {
+    const dot = document.createElement('div');
+    dot.className = 'c-dot' + (idx === 0 ? ' active' : '');
+    dot.addEventListener('click', () => {
+      if (track) {
+        const cardWidth = projectCards[0].offsetWidth + 22;
+        track.scrollTo({ left: idx * cardWidth, behavior: 'smooth' });
+      }
+    });
+    dotsContainer.appendChild(dot);
+  });
+}
+
+function updateDots() {
+  if (!track || !dotsContainer) return;
+  const cardWidth = (projectCards[0]?.offsetWidth || 300) + 22;
+  const activeIndex = Math.round(track.scrollLeft / cardWidth);
+  const dots = dotsContainer.querySelectorAll('.c-dot');
+  dots.forEach((d, i) => {
+    d.classList.toggle('active', i === activeIndex);
+  });
+}
+
+if (track) {
+  track.addEventListener('scroll', updateDots, { passive: true });
+}
+
+// Arrow Controls
+if (prevBtn && track) {
+  prevBtn.addEventListener('click', () => {
+    const scrollStep = (projectCards[0]?.offsetWidth || 320) + 22;
+    track.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+  });
+}
+
+if (nextBtn && track) {
+  nextBtn.addEventListener('click', () => {
+    const scrollStep = (projectCards[0]?.offsetWidth || 320) + 22;
+    track.scrollBy({ left: scrollStep, behavior: 'smooth' });
+  });
+}
+
+// Slow Gentle Side-Scroll Auto Slider (Pauses on Hover / Touch)
+function startSlowAutoScroll() {
+  setInterval(() => {
+    if (!isHovered && track) {
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      if (track.scrollLeft >= maxScroll - 8) {
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        const step = (projectCards[0]?.offsetWidth || 320) + 22;
+        track.scrollBy({ left: step, behavior: 'smooth' });
+      }
+    }
+  }, 4500);
+}
+
+if (track) {
+  track.addEventListener('mouseenter', () => { isHovered = true; });
+  track.addEventListener('mouseleave', () => { isHovered = false; });
+  track.addEventListener('touchstart', () => { isHovered = true; }, { passive: true });
+  track.addEventListener('touchend', () => {
+    setTimeout(() => { isHovered = false; }, 2500);
+  }, { passive: true });
+}
+
+startSlowAutoScroll();
 
 /* ---- Project Filtering ---- */
 const filterBtns = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.project-card');
 
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -148,18 +225,14 @@ filterBtns.forEach(btn => {
       const category = card.getAttribute('data-category');
       if (filter === 'all' || category === filter) {
         card.style.display = 'flex';
-        setTimeout(() => {
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        }, 30);
       } else {
-        card.style.opacity = '0';
-        card.style.transform = 'scale(0.95)';
-        setTimeout(() => {
-          card.style.display = 'none';
-        }, 250);
+        card.style.display = 'none';
       }
     });
+
+    if (track) {
+      track.scrollTo({ left: 0, behavior: 'smooth' });
+    }
   });
 });
 
@@ -172,9 +245,9 @@ function openDemoModal(title, desc) {
   const modalUrl = document.getElementById('modal-url');
 
   if (modalTitle) modalTitle.textContent = title;
-  if (modalSubhead) modalSubhead.textContent = `${title} — Live Preview`;
+  if (modalSubhead) modalSubhead.textContent = title + ' — Live Preview';
   if (modalDesc) modalDesc.textContent = desc;
-  if (modalUrl) modalUrl.textContent = `https://pankaj-vibe-apps.dev/${title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
+  if (modalUrl) modalUrl.textContent = 'https://pankaj-vibe-apps.dev/' + title.toLowerCase().replace(/[^a-z0-9]/g, '-');
 
   if (modal) {
     modal.classList.add('active');
@@ -196,7 +269,6 @@ function closeDemoModal(event) {
   }
 }
 
-// ESC Key listener to close modal
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     closeDemoModalDirect();
@@ -218,7 +290,7 @@ if (contactForm) {
     if (!name || !email || !message) {
       if (statusBox) {
         statusBox.className = 'error';
-        statusBox.textContent = 'Please fill in all required fields (Name, Email, Message).';
+        statusBox.textContent = 'Please fill in all required fields.';
       }
       return;
     }
@@ -232,14 +304,14 @@ if (contactForm) {
     }
 
     if (submitBtn) {
-      submitBtn.innerHTML = '<span>Sending Message...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
+      submitBtn.innerHTML = '<span>Sending...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
       submitBtn.disabled = true;
     }
 
     setTimeout(() => {
       if (statusBox) {
         statusBox.className = 'success';
-        statusBox.textContent = `Thank you ${name}! Your message has been received. Pankaj will get back to you within 24 hours.`;
+        statusBox.textContent = 'Thank you ' + name + '! Your message has been received. Pankaj will reply within 24 hours.';
       }
       contactForm.reset();
       if (submitBtn) {
@@ -253,7 +325,7 @@ if (contactForm) {
   });
 }
 
-/* ---- Smooth Scroll for internal hash links ---- */
+/* ---- Smooth Scroll for hash links ---- */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     const targetId = this.getAttribute('href');
@@ -261,9 +333,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const targetEl = document.querySelector(targetId);
     if (targetEl) {
       e.preventDefault();
-      const topOffset = targetEl.getBoundingClientRect().top + window.scrollY - 75;
+      const topOffset = targetEl.getBoundingClientRect().top + window.scrollY - 70;
       window.scrollTo({ top: topOffset, behavior: 'smooth' });
     }
   });
 });
-

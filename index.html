@@ -2,21 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
   <title>Pankaj Kumar — BCA Student & Vibe Coder | Portfolio</title>
   <meta name="description" content="Portfolio of Pankaj Kumar — BCA Student and Vibe Coder building modern applications with AI-powered development." />
   <meta name="keywords" content="Pankaj Kumar, BCA Student, Vibe Coder, Web Developer, AI-Assisted Development, Sumit Sain" />
+  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Ambient Light Mesh Background -->
   <div class="ambient-glow glow-1"></div>
   <div class="ambient-glow glow-2"></div>
   <div class="ambient-glow glow-3"></div>
 
+  <!-- Mobile Navigation Overlay -->
   <div id="mobile-menu" aria-label="Mobile Navigation">
     <div class="mobile-menu-header">
       <span class="nav-logo">PK<span class="logo-accent">.dev</span></span>
@@ -36,689 +44,891 @@
     </div>
   </div>
 
-  <nav id="navbar">
-  <div class="container">
-    <div class="nav-inner">
-      <a href="#hero" class="nav-logo">PK<span>.dev</span></a>
-      <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#developer">Developer</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <a href="#contact" class="btn btn-primary nav-cta"><i class="fa-solid fa-paper-plane"></i> Hire Me</a>
-      <button id="hamburger" aria-label="Toggle menu" onclick="toggleMobile()">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</nav>
-<section id="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div class="hero-text">
-        <div class="hero-eyebrow reveal">
-          <span class="live-dot"></span>
-          <span class="eyebrow-text">Available for Projects &amp; Collaborations</span>
-        </div>
-        <h1 class="hero-name reveal" style="transition-delay:.1s">
-          Hi, I&apos;m <br><span class="gradient-text">Pankaj Kumar</span>
-        </h1>
-        <div class="typewriter-container reveal" style="transition-delay:.18s">
-          <span class="prefix">I am a </span>
-          <span id="typed-text" class="typed-highlight"></span>
-          <span class="cursor">&nbsp;</span>
-        </div>
-        <p class="hero-desc reveal" style="transition-delay:.26s">
-          Bridging the gap between <strong>BCA computer science</strong> and next-gen <strong>AI-assisted vibe coding</strong>. I build blazingly fast, modern web experiences with precision aesthetics and seamless animations.
-        </p>
-        <div class="hero-btns reveal" style="transition-delay:.34s">
-          <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-wand-magic-sparkles"></i> <span>Explore Projects</span></a>
-          <a href="#contact" class="btn btn-secondary"><i class="fa-solid fa-envelope"></i> <span>Let&apos;s Talk</span></a>
-        </div>
-        <div class="hero-footer-meta reveal" style="transition-delay:.42s">
-          <div class="hero-socials">
-            <a href="mailto:pankajdoopga@gmail.com" class="social-icon-btn" title="Email Me" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://github.com" target="_blank" rel="noreferrer" class="social-icon-btn" title="GitHub Profile" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="social-icon-btn" title="LinkedIn Profile" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" class="social-icon-btn" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          </div>
-          <div class="status-pill">
-            <i class="fa-solid fa-bolt" style="color:#ca8a04"></i>
-            <span>Vibe Coding Active</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-visual-wrap reveal-right" style="transition-delay:.2s">
-        <div class="hero-frame-container">
-          <div class="halo-ring ring-1"></div>
-          <div class="halo-ring ring-2"></div>
-          <div class="photo-main-frame">
-            <img src="pankaj-photo.jpg" alt="Pankaj Kumar — BCA Student and Vibe Coder" class="hero-photo" />
-            <div class="photo-overlay-tint"></div>
-          </div>
-          <div class="floating-badge badge-top-left">
-            <div class="badge-icon-box"><i class="fa-solid fa-code"></i></div>
-            <div class="badge-content">
-              <span class="badge-title">Vibe Coder</span>
-              <span class="badge-sub">AI Workflow</span>
-            </div>
-          </div>
-          <div class="floating-badge badge-bottom-right">
-            <div class="badge-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
-            <div class="badge-content">
-              <span class="badge-title">BCA Student</span>
-              <span class="badge-sub">Tech Explorer</span>
-            </div>
-          </div>
-          <div class="floating-badge badge-bottom-left">
-            <div class="badge-icon-box" style="background:rgba(34,197,94,.15);color:#16a34a">
-              <i class="fa-solid fa-circle-check"></i>
-            </div>
-            <div class="badge-content">
-              <span class="badge-title">100% Responsive</span>
-              <span class="badge-sub">60-120 FPS</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== ABOUT SECTION (No Duplicate Image) ==================== -->
-<section id="about" class="section">
-  <div class="container">
-    <div class="section-head-center reveal">
-      <span class="section-badge"><i class="fa-solid fa-user-astronaut"></i> Biography</span>
-      <h2 class="section-title">Beyond The Code, <span class="gradient-text">Into The Future</span></h2>
-      <p class="section-desc">Get to know the developer, the philosophy of vibe coding, and the drive behind the screen.</p>
-    </div>
-
-    <div class="about-grid">
-      <!-- Interactive Terminal Card in place of photo -->
-      <div class="about-visual-col reveal-left">
-        <div class="dev-terminal-card">
-          <div class="terminal-header">
-            <div class="terminal-dots">
-              <span class="dot dot-red"></span>
-              <span class="dot dot-yellow"></span>
-              <span class="dot dot-green"></span>
-            </div>
-            <span class="terminal-title">pankaj@vibe-station: ~/identity</span>
-            <span class="terminal-badge">ONLINE</span>
-          </div>
-
-          <div class="terminal-body">
-            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">cat developer_info.json</span></div>
-            <pre class="t-code">{
-  <span class="t-key">"name"</span>: <span class="t-str">"Pankaj Kumar"</span>,
-  <span class="t-key">"role"</span>: <span class="t-str">"BCA Student &amp; Vibe Coder"</span>,
-  <span class="t-key">"approach"</span>: <span class="t-str">"AI-Assisted Rapid Development"</span>,
-  <span class="t-key">"location"</span>: <span class="t-str">"India 🇮🇳"</span>,
-  <span class="t-key">"philosophy"</span>: <span class="t-str">"Prompt Smart · Iterate Fast · Ship Clean"</span>
-}</pre>
-            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">vibe-engine --status</span></div>
-            <div class="t-status">
-              <span class="t-ok">✔ AI Co-Pilots: Claude 3.7 &amp; GPT-4o</span><br />
-              <span class="t-ok">✔ GPU Transitions: Active (60-120 FPS)</span><br />
-              <span class="t-ok">✔ Architecture: Semantic HTML, Modern CSS, ES6+</span>
-            </div>
-          </div>
-
-          <div class="terminal-stats-grid stagger">
-            <div class="t-stat-box reveal">
-              <span class="t-stat-number" data-target="10">0</span><span class="t-stat-plus">+</span>
-              <span class="t-stat-label">Projects Built</span>
-            </div>
-            <div class="t-stat-box reveal">
-              <span class="t-stat-number" data-target="6">0</span><span class="t-stat-plus">+</span>
-              <span class="t-stat-label">Courses Done</span>
-            </div>
-            <div class="t-stat-box reveal">
-              <span class="t-stat-number" data-target="100">0</span><span class="t-stat-plus">%</span>
-              <span class="t-stat-label">Vibe Energy</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- About Story & Milestones -->
-      <div class="about-content-col reveal-right">
-        <div class="about-story-box">
-          <h3 class="about-headline">
-            A Passionate <span class="highlight-underline">BCA Coder</span> Building with Modern Speed
-          </h3>
-          <p class="about-paragraph">
-            My journey began in the classroom with core programming fundamentals and quickly evolved into embracing <strong>AI-assisted development</strong>. I blend algorithmic logic with prompt engineering to build responsive, visually engaging web applications in record time.
-          </p>
-          <div class="vibe-callout-card">
-            <div class="callout-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
-            <div class="callout-text">
-              <h4>What is Vibe Coding?</h4>
-              <p>
-                It&apos;s prompt-driven, rapid iteration where AI amplifies creativity. Instead of getting bogged down in repetitive boilerplate, I focus on architecture, aesthetics, user experience, and real working solutions.
-              </p>
-            </div>
-          </div>
-
-          <h4 class="edu-title"><i class="fa-solid fa-award"></i> Education &amp; Milestones</h4>
-          <ul class="education-list stagger">
-            <li class="edu-item reveal">
-              <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-              <div>
-                <div class="edu-name">Bachelor of Computer Applications (BCA)</div>
-                <div class="edu-meta">Currently Pursuing · Computer Science</div>
-              </div>
-            </li>
-            <li class="edu-item reveal">
-              <div class="edu-icon"><i class="fa-solid fa-certificate"></i></div>
-              <div>
-                <div class="edu-name">Web Development Bootcamp</div>
-                <div class="edu-meta">HTML, CSS, JavaScript · Completed</div>
-              </div>
-            </li>
-            <li class="edu-item reveal">
-              <div class="edu-icon"><i class="fa-solid fa-robot"></i></div>
-              <div>
-                <div class="edu-name">AI-Assisted Development &amp; Prompt Engineering</div>
-                <div class="edu-meta">Vibe Coding Workflow · Self-Taught &amp; Practiced</div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="skills" class="section">
-  <div class="container">
-    <div style="text-align:center;max-width:560px;margin:0 auto" class="reveal">
-      <span class="section-label">Tech Stack</span>
-      <h2 class="section-title">Skills &amp; <span>Technologies</span></h2>
-      <p class="section-sub" style="margin:0 auto">Tools and technologies I use to bring ideas to life — from design to deployment.</p>
-    </div>
-    <div class="skills-grid stagger">
-      <div class="skill-card reveal"><div class="skill-icon" style="background:#fff3e0;color:#e44d26"><i class="fa-brands fa-html5"></i></div><div class="skill-name">HTML5</div><div class="skill-level">Proficient</div></div>
-      <div class="skill-card reveal"><div class="skill-icon" style="background:#e3f2fd;color:#1565c0"><i class="fa-brands fa-css3-alt"></i></div><div class="skill-name">CSS3</div><div class="skill-level">Proficient</div></div>
-      <div class="skill-card reveal"><div class="skill-icon" style="background:#fffde7;color:#f9a825"><i class="fa-brands fa-js"></i></div><div class="skill-name">JavaScript</div><div class="skill-level">Intermediate</div></div>
-      <div class="skill-card reveal"><div class="skill-icon" style="background:#e0f7fa;color:#00acc1"><i class="fa-brands fa-react"></i></div><div class="skill-name">React.js</div><div class="skill-level">Learning</div></div>
-      <div class="skill-card reveal"><div class="skill-icon" style="background:#fce4ec;color:#d32f2f"><i class="fa-brands fa-git-alt"></i></div><div class="skill-name">Git/GitHub</div><div class="skill-level">Proficient</div></div>
-      <div class="skill-card reveal"><div class="skill-icon" style="background:#f3e5f5;color:#7b1fa2"><i class="fa-solid fa-robot"></i></div><div class="skill-name">AI Tools</div><div class="skill-level">Expert</div></div>
-      <div class="skill-card reveal"><div class="skill-icon" style="background:#e8f5e9;color:#2e7d32"><i class="fa-solid fa-wand-magic-sparkles"></i></div><div class="skill-name">Prompt Eng.</div><div class="skill-level">Expert</div></div>
-      <div class="skill-card reveal"><div class="skill-icon" style="background:#e8eaf6;color:#3949ab"><i class="fa-solid fa-mobile-screen-button"></i></div><div class="skill-name">Responsive</div><div class="skill-level">Proficient</div></div>
-      <div class="skill-card reveal"><div class="skill-icon" style="background:#fbe9e7;color:#f44336"><i class="fa-brands fa-figma"></i></div><div class="skill-name">Figma</div><div class="skill-level">Beginner</div></div>
-      <div class="skill-card reveal"><div class="skill-icon" style="background:#e8f5e9;color:#388e3c"><i class="fa-brands fa-node-js"></i></div><div class="skill-name">Node.js</div><div class="skill-level">Beginner</div></div>
-    </div>
-  </div>
-</section>
-<section id="developer" class="section">
-  <div class="container">
-    <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto">
-      <span class="section-label dev-label">Meet the Developer</span>
-      <h2 class="section-title dev-title">The <span>Vibe Coder</span> Behind the Screen</h2>
-      <p class="section-sub dev-sub">My philosophy, workflow, tools, and what drives me to build every single day.</p>
-    </div>
-    <div class="dev-grid">
-      <div class="reveal-left">
-        <h3 class="dev-h3"><i class="fa-solid fa-diagram-project" style="color:var(--accent);margin-right:8px"></i>My Dev Workflow</h3>
-        <div class="dev-workflow">
-          <div class="workflow-step"><div class="ws-num">01</div><div class="ws-body"><h4>💡 Idea &amp; Planning</h4><p>Every great project starts with a clear idea. I define the goal, target audience, and core features before writing a single line of code.</p></div></div>
-          <div class="workflow-step"><div class="ws-num">02</div><div class="ws-body"><h4>✍️ Prompt &amp; Design</h4><p>I craft detailed prompts and design layouts using AI tools and Figma — bringing the vision to a tangible structure.</p></div></div>
-          <div class="workflow-step"><div class="ws-num">03</div><div class="ws-body"><h4>⚡ Build with AI</h4><p>Using Claude, ChatGPT, and other AI co-pilots, I accelerate development — writing, debugging, and iterating at supercharged speed.</p></div></div>
-          <div class="workflow-step"><div class="ws-num">04</div><div class="ws-body"><h4>🧪 Test &amp; Polish</h4><p>Rigorous testing across devices and browsers. Animations smoothed out, edge cases handled, UI polished to pixel-perfect.</p></div></div>
-          <div class="workflow-step"><div class="ws-num">05</div><div class="ws-body"><h4>🚀 Deploy &amp; Ship</h4><p>Live on the internet — Vercel, Netlify, or GitHub Pages. Fast, reliable, and ready for real users.</p></div></div>
-        </div>
-      </div>
-      <div class="reveal-right">
-        <h3 class="dev-h3"><i class="fa-solid fa-chart-bar" style="color:var(--accent);margin-right:8px"></i>Fun Facts &amp; Stats</h3>
-        <div class="dev-stats-grid stagger">
-          <div class="dev-stat reveal"><div class="num">10+</div><div class="lbl">Projects Built</div></div>
-          <div class="dev-stat reveal"><div class="num">6+</div><div class="lbl">Courses Completed</div></div>
-          <div class="dev-stat reveal"><div class="num">500+</div><div class="lbl">Prompts Crafted</div></div>
-          <div class="dev-stat reveal"><div class="num">&#x221E;</div><div class="lbl">Curiosity Level</div></div>
-        </div>
-        <h3 class="dev-h3" style="margin-top:32px"><i class="fa-solid fa-toolbox" style="color:var(--teal);margin-right:8px"></i>Tools I Use Daily</h3>
-        <div class="tools-grid">
-          <span class="tool-tag">Claude AI</span><span class="tool-tag">ChatGPT</span><span class="tool-tag">VS Code</span><span class="tool-tag">GitHub Copilot</span><span class="tool-tag">Figma</span><span class="tool-tag">Git</span><span class="tool-tag">Chrome DevTools</span><span class="tool-tag">Vercel</span><span class="tool-tag">Netlify</span><span class="tool-tag">Cursor IDE</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="projects" class="section">
-  <div class="container">
-    <div class="section-head-center reveal">
-      <span class="section-badge"><i class="fa-solid fa-laptop-code"></i> Portfolio Work</span>
-      <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
-      <p class="section-desc">Hand-crafted digital products built with modern web technologies and AI-assisted workflows.</p>
-    </div>
-
-    <!-- Filter Buttons -->
-    <div class="project-filters reveal">
-      <button class="filter-btn active" data-filter="all">All Projects</button>
-      <button class="filter-btn" data-filter="ai">AI &amp; Vibe Apps</button>
-      <button class="filter-btn" data-filter="web">Web Apps</button>
-      <button class="filter-btn" data-filter="ui">Landing Pages</button>
-    </div>
-
-    <div class="projects-grid stagger">
-      <!-- Project 1 -->
-      <article class="project-card reveal" data-category="ai">
-        <div class="project-thumb-frame">
-          <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&auto=format&fit=crop&q=80" alt="Portfolio Website Builder" loading="lazy" />
-          <div class="project-badge">AI Powered</div>
-        </div>
-        <div class="project-card-body">
-          <h3 class="project-heading">Portfolio Website Builder</h3>
-          <p class="project-summary">An intelligent site builder helping creators design stunning developer portfolios with automated layouts and preset components.</p>
-          <div class="project-tags">
-            <span class="ptag">React</span>
-            <span class="ptag">AI Tools</span>
-            <span class="ptag">CSS3</span>
-          </div>
-          <div class="project-btn-group">
-            <button class="pbtn pbtn-main" onclick="openDemoModal('Portfolio Website Builder', 'An AI-assisted personal portfolio generator designed with modular layout components.')">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-            </button>
-            <a href="https://github.com" target="_blank" rel="noreferrer" class="pbtn pbtn-sec">
-              <i class="fa-brands fa-github"></i> Code
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 2 -->
-      <article class="project-card reveal" data-category="web">
-        <div class="project-thumb-frame">
-          <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&auto=format&fit=crop&q=80" alt="Animated Task Manager" loading="lazy" />
-          <div class="project-badge">Productivity</div>
-        </div>
-        <div class="project-card-body">
-          <h3 class="project-heading">Animated To-Do &amp; Task Hub</h3>
-          <p class="project-summary">A high-satisfaction task tracker featuring micro-animations, priority categories, persistent local storage, and drag-to-reorder logic.</p>
-          <div class="project-tags">
-            <span class="ptag">JavaScript</span>
-            <span class="ptag">LocalStorage</span>
-            <span class="ptag">CSS Keyframes</span>
-          </div>
-          <div class="project-btn-group">
-            <button class="pbtn pbtn-main" onclick="openDemoModal('Animated To-Do App', 'A smooth interactive task manager with priority tags and localStorage persistence.')">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-            </button>
-            <a href="https://github.com" target="_blank" rel="noreferrer" class="pbtn pbtn-sec">
-              <i class="fa-brands fa-github"></i> Code
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 3: Weather Dashboard (Fixed High-Res Weather Image) -->
-      <article class="project-card reveal" data-category="web">
-        <div class="project-thumb-frame">
-          <img src="https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&auto=format&fit=crop&q=80" alt="Live Weather Dashboard" loading="lazy" />
-          <div class="project-badge">API Integration</div>
-        </div>
-        <div class="project-card-body">
-          <h3 class="project-heading">Real-Time Weather Dashboard</h3>
-          <p class="project-summary">Interactive weather application fetching live temperature, atmospheric pressure, 5-day forecast, and dynamic animated weather cards.</p>
-          <div class="project-tags">
-            <span class="ptag">OpenWeather API</span>
-            <span class="ptag">Async/Await</span>
-            <span class="ptag">Responsive</span>
-          </div>
-          <div class="project-btn-group">
-            <button class="pbtn pbtn-main" onclick="openDemoModal('Weather Dashboard', 'Real-time weather station fetching live meteorological forecasts using OpenWeather API.')">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-            </button>
-            <a href="https://github.com" target="_blank" rel="noreferrer" class="pbtn pbtn-sec">
-              <i class="fa-brands fa-github"></i> Code
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 4 -->
-      <article class="project-card reveal" data-category="ui">
-        <div class="project-thumb-frame">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80" alt="E-commerce Storefront" loading="lazy" />
-          <div class="project-badge">E-Commerce</div>
-        </div>
-        <div class="project-card-body">
-          <h3 class="project-heading">Modern E-Commerce Storefront</h3>
-          <p class="project-summary">High-converting landing page with interactive product filters, cart checkout drawer, smooth card transitions, and pixel-perfect responsiveness.</p>
-          <div class="project-tags">
-            <span class="ptag">HTML5 / CSS3</span>
-            <span class="ptag">UI/UX</span>
-            <span class="ptag">JavaScript</span>
-          </div>
-          <div class="project-btn-group">
-            <button class="pbtn pbtn-main" onclick="openDemoModal('E-commerce Storefront', 'Modern retail landing page with product cards and live cart interaction.')">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-            </button>
-            <a href="https://github.com" target="_blank" rel="noreferrer" class="pbtn pbtn-sec">
-              <i class="fa-brands fa-github"></i> Code
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 5 -->
-      <article class="project-card reveal" data-category="ui">
-        <div class="project-thumb-frame">
-          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80" alt="Gourmet Cafe Website" loading="lazy" />
-          <div class="project-badge">Business Web</div>
-        </div>
-        <div class="project-card-body">
-          <h3 class="project-heading">Gourmet Café &amp; Dining Site</h3>
-          <p class="project-summary">Warm, inviting restaurant website featuring a dynamic menu showcase, table reservation booking form, and interactive gallery reveals.</p>
-          <div class="project-tags">
-            <span class="ptag">Vanilla CSS</span>
-            <span class="ptag">JavaScript</span>
-            <span class="ptag">Form Validation</span>
-          </div>
-          <div class="project-btn-group">
-            <button class="pbtn pbtn-main" onclick="openDemoModal('Gourmet Cafe Site', 'Restaurant web experience with animated menu categories and table booking.')">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-            </button>
-            <a href="https://github.com" target="_blank" rel="noreferrer" class="pbtn pbtn-sec">
-              <i class="fa-brands fa-github"></i> Code
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 6 -->
-      <article class="project-card reveal" data-category="ai">
-        <div class="project-thumb-frame">
-          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80" alt="AI Chat Companion UI" loading="lazy" />
-          <div class="project-badge">AI Interface</div>
-        </div>
-        <div class="project-card-body">
-          <h3 class="project-heading">AI Chat Companion Interface</h3>
-          <p class="project-summary">Sleek conversational assistant interface with typing indicators, markdown message formatting, history drawer, and dark/light themes.</p>
-          <div class="project-tags">
-            <span class="ptag">AI Integration</span>
-            <span class="ptag">Glassmorphism</span>
-            <span class="ptag">JavaScript</span>
-          </div>
-          <div class="project-btn-group">
-            <button class="pbtn pbtn-main" onclick="openDemoModal('AI Chat Companion', 'Intelligent conversational chat UI with streaming responses and typing simulation.')">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-            </button>
-            <a href="https://github.com" target="_blank" rel="noreferrer" class="pbtn pbtn-sec">
-              <i class="fa-brands fa-github"></i> Code
-            </a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== TESTIMONIALS SECTION ==================== -->
-<section id="testimonials" class="section bg-alt">
-  <div class="container">
-    <div class="section-head-center reveal">
-      <span class="section-badge"><i class="fa-solid fa-comments"></i> Endorsements</span>
-      <h2 class="section-title">What Mentors &amp; <span class="gradient-text">Clients Say</span></h2>
-      <p class="section-desc">Feedback on work ethic, delivery speed, and clean modern execution.</p>
-    </div>
-    <div class="testimonials-grid stagger">
-      <div class="testimonial-card reveal">
-        <div class="quote-mark"><i class="fa-solid fa-quote-left"></i></div>
-        <p class="quote-text">
-          &quot;Pankaj built our business landing page in record time. The animations are buttery smooth, and his vibe coding approach allowed us to iterate on design changes instantly.&quot;
-        </p>
-        <div class="author-box">
-          <div class="author-avatar" style="background:linear-gradient(135deg,#b45309,#d97706)">R</div>
-          <div>
-            <h5 class="author-name">Rahul Sharma</h5>
-            <span class="author-role">Small Business Founder</span>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card reveal">
-        <div class="quote-mark"><i class="fa-solid fa-quote-left"></i></div>
-        <p class="quote-text">
-          &quot;As a BCA student, Pankaj displays an exceptional ability to leverage modern AI tools without losing grip of core coding principles. Highly recommended!&quot;
-        </p>
-        <div class="author-box">
-          <div class="author-avatar" style="background:linear-gradient(135deg,#0d9488,#059669)">P</div>
-          <div>
-            <h5 class="author-name">Priya Verma</h5>
-            <span class="author-role">Academic Mentor</span>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card reveal">
-        <div class="quote-mark"><i class="fa-solid fa-quote-left"></i></div>
-        <p class="quote-text">
-          &quot;The design sensibility and responsiveness of his projects are remarkable. He has a sharp eye for visual details, font hierarchy, and smooth micro-interactions.&quot;
-        </p>
-        <div class="author-box">
-          <div class="author-avatar" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">A</div>
-          <div>
-            <h5 class="author-name">Amit Patel</h5>
-            <span class="author-role">Frontend Tech Lead</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== CONTACT SECTION ==================== -->
-<section id="contact" class="section">
-  <div class="container">
-    <div class="contact-card-wrapper">
-      <div class="contact-grid">
-        <div class="contact-info-col reveal-left">
-          <span class="section-badge"><i class="fa-solid fa-envelope-open-text"></i> Reach Out</span>
-          <h2 class="contact-title">Let&apos;s Build Something <span class="gradient-text">Exceptional</span></h2>
-          <p class="contact-subtext">
-            Have a project idea, website requirement, freelance gig, or just want to discuss vibe coding? 
-            Drop me a message and I&apos;ll get back to you promptly.
-          </p>
-
-          <div class="contact-links-list">
-            <a href="mailto:pankajdoopga@gmail.com" class="c-link-item">
-              <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
-              <div class="c-info">
-                <span class="c-label">Direct Email</span>
-                <span class="c-value">pankajdoopga@gmail.com</span>
-              </div>
-            </a>
-            <div class="c-link-item">
-              <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
-              <div class="c-info">
-                <span class="c-label">Location</span>
-                <span class="c-value">India 🇮🇳 · Remote Worldwide</span>
-              </div>
-            </div>
-            <div class="c-link-item">
-              <div class="c-icon"><i class="fa-solid fa-clock"></i></div>
-              <div class="c-info">
-                <span class="c-label">Typical Response</span>
-                <span class="c-value">Under 24 Hours</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="social-connect-bar">
-            <span class="sc-title">Connect With Me:</span>
-            <div class="sc-links">
-              <a href="mailto:pankajdoopga@gmail.com" class="sc-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
-              <a href="https://github.com" target="_blank" rel="noreferrer" class="sc-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="sc-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" class="sc-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-form-col reveal-right">
-          <form id="contact-form" class="custom-contact-form" novalidate>
-            <div class="form-row">
-              <div class="form-field">
-                <label for="form-name">Your Full Name <span class="req">*</span></label>
-                <div class="input-wrap">
-                  <i class="fa-solid fa-user field-icon"></i>
-                  <input type="text" id="form-name" placeholder="Pankaj Kumar" required />
-                </div>
-              </div>
-              <div class="form-field">
-                <label for="form-email">Your Email Address <span class="req">*</span></label>
-                <div class="input-wrap">
-                  <i class="fa-solid fa-envelope field-icon"></i>
-                  <input type="email" id="form-email" placeholder="name@example.com" required />
-                </div>
-              </div>
-            </div>
-
-            <div class="form-field">
-              <label for="form-subject">Project Topic / Subject</label>
-              <div class="input-wrap">
-                <i class="fa-solid fa-tag field-icon"></i>
-                <input type="text" id="form-subject" placeholder="Website Project / Vibe Collaboration" />
-              </div>
-            </div>
-
-            <div class="form-field">
-              <label for="form-message">Your Message <span class="req">*</span></label>
-              <div class="input-wrap">
-                <textarea id="form-message" rows="5" placeholder="Describe your project, timeline, or what you'd like to collaborate on..." required></textarea>
-              </div>
-            </div>
-
-            <div id="form-status-box"></div>
-
-            <button type="submit" id="form-submit-btn" class="btn btn-primary btn-block">
-              <span>Send Message</span>
-              <i class="fa-solid fa-paper-plane"></i>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== FOOTER (Crafted by Sumit Sain) ==================== -->
-<footer id="footer">
-  <div class="container">
-    <div class="footer-top-grid">
-      <div class="footer-brand-col">
-        <a href="#hero" class="footer-logo">
+  <!-- Navigation Bar -->
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo" id="nav-logo">
           <div class="logo-box"><i class="fa-solid fa-code"></i></div>
           <span>PK<span class="logo-accent">.dev</span></span>
         </a>
-        <p class="footer-about-text">
-          Pankaj Kumar — BCA Student &amp; Vibe Coder. Building the digital future with rapid AI-assisted workflows and modern design systems.
-        </p>
-        <div class="created-by-badge">
-          <i class="fa-solid fa-wand-magic-sparkles"></i>
-          <span>Crafted &amp; Designed by <strong>Sumit Sain</strong></span>
-        </div>
-      </div>
 
-      <div class="footer-links-col">
-        <h5 class="f-col-title">Navigation</h5>
-        <ul class="f-links">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#skills">Tech Stack</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#developer">Vibe Workflow</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#developer" class="nav-link">Developer</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
-      </div>
 
-      <div class="footer-links-col">
-        <h5 class="f-col-title">Featured Work</h5>
-        <ul class="f-links">
-          <li><a href="#projects">Portfolio Builder</a></li>
-          <li><a href="#projects">Weather Station</a></li>
-          <li><a href="#projects">Task Hub App</a></li>
-          <li><a href="#projects">E-Commerce Store</a></li>
-          <li><a href="#projects">AI Assistant UI</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links-col">
-        <h5 class="f-col-title">Get In Touch</h5>
-        <div class="footer-contact-info">
-          <a href="mailto:pankajdoopga@gmail.com" class="f-contact-link">
-            <i class="fa-solid fa-envelope"></i> pankajdoopga@gmail.com
+        <div class="nav-right-actions">
+          <a href="#contact" class="btn btn-primary nav-cta">
+            <span>Hire Me</span>
+            <i class="fa-solid fa-arrow-right"></i>
           </a>
-          <span class="f-status-text"><span class="f-dot"></span> Open for Opportunities</span>
-        </div>
-        <div class="f-social-icons">
-          <a href="mailto:pankajdoopga@gmail.com" class="f-icon" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-          <a href="https://github.com" target="_blank" rel="noreferrer" class="f-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="f-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer" class="f-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <button id="hamburger" aria-label="Toggle navigation menu" onclick="toggleMobile()">
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </div>
     </div>
+  </nav>
 
-    <div class="footer-bottom-bar">
-      <div class="f-copyright">
-        <p>© 2026 <strong>Pankaj Kumar</strong>. All Rights Reserved.</p>
-        <p class="creator-credit">Designed &amp; Developed with ❤️ by <strong>Sumit Sain</strong></p>
-      </div>
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Hero Text -->
+        <div class="hero-text">
+          <div class="hero-eyebrow reveal">
+            <span class="live-dot"></span>
+            <span class="eyebrow-text">Available for Projects &amp; Collaborations</span>
+          </div>
 
-      <button id="back-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Scroll back to top">
-        <span>Back to Top</span>
-        <i class="fa-solid fa-arrow-up"></i>
-      </button>
-    </div>
-  </div>
-</footer>
+          <h1 class="hero-name reveal">
+            Hi, I'm <br />
+            <span class="gradient-text">Pankaj Kumar</span>
+          </h1>
 
-<!-- ==================== DEMO MODAL POPUP ==================== -->
-<div id="demo-modal" class="modal-overlay" onclick="closeDemoModal(event)">
-  <div class="modal-card">
-    <div class="modal-header">
-      <div class="modal-title-wrap">
-        <i class="fa-solid fa-laptop-code modal-icon"></i>
-        <h3 id="modal-project-title">Project Live Demo</h3>
-      </div>
-      <button class="modal-close-btn" onclick="closeDemoModalDirect()">&times;</button>
-    </div>
-    <div class="modal-body">
-      <div class="modal-screen-preview">
-        <div class="simulated-browser-bar">
-          <span class="s-dot s-red"></span>
-          <span class="s-dot s-yellow"></span>
-          <span class="s-dot s-green"></span>
-          <span class="s-url" id="modal-url">https://pankaj-vibe-apps.dev/live-demo</span>
+          <div class="typewriter-container reveal">
+            <span class="prefix">I am a </span>
+            <span id="typed-text" class="typed-highlight"></span>
+            <span class="cursor">&nbsp;</span>
+          </div>
+
+          <p class="hero-desc reveal">
+            Bridging the gap between <strong>BCA computer science</strong> and next-gen 
+            <strong>AI-assisted vibe coding</strong>. I craft blazingly fast, responsive web experiences 
+            with precision aesthetics and 120 FPS animations.
+          </p>
+
+          <div class="hero-btns reveal">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <span>Explore Projects</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Let's Talk</span>
+            </a>
+          </div>
+
+          <div class="hero-footer-meta reveal">
+            <div class="hero-socials">
+              <a href="mailto:pankajdoopga@gmail.com" class="social-icon-btn" title="Email Me" aria-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a href="https://github.com/rizx0011/Pankajkumar" target="_blank" rel="noreferrer" class="social-icon-btn" title="GitHub Profile" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="social-icon-btn" title="LinkedIn Profile" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" class="social-icon-btn" title="Instagram" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+
+            <div class="status-pill">
+              <i class="fa-solid fa-bolt" style="color: #ca8a04;"></i>
+              <span>Vibe Coding Engine Active</span>
+            </div>
+          </div>
         </div>
-        <div class="simulated-app-frame" id="modal-app-frame">
-          <div class="demo-live-preview-content">
-            <i class="fa-solid fa-circle-check" style="font-size:2.5rem;color:#16a34a;margin-bottom:12px"></i>
-            <h4 id="modal-project-subhead">Project Ready for Live Preview</h4>
-            <p id="modal-project-desc" style="color:#64748b;font-size:.95rem;max-width:440px;margin:8px auto 20px">
-              This project has been built using modern responsive components and AI vibe architecture.
+
+        <!-- Hero Visual Spotlight (Pankaj's Photo) -->
+        <div class="hero-visual-wrap reveal-right">
+          <div class="hero-frame-container">
+            <div class="halo-ring ring-1"></div>
+            <div class="halo-ring ring-2"></div>
+            
+            <div class="photo-main-frame">
+              <img src="pankaj-photo.jpg" alt="Pankaj Kumar — BCA Student & Vibe Coder" class="hero-photo" />
+              <div class="photo-overlay-tint"></div>
+            </div>
+
+            <!-- Floating Badges -->
+            <div class="floating-badge badge-top-left">
+              <div class="badge-icon-box"><i class="fa-solid fa-code"></i></div>
+              <div class="badge-content">
+                <span class="badge-title">Vibe Coder</span>
+                <span class="badge-sub">AI Workflow</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-right">
+              <div class="badge-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="badge-content">
+                <span class="badge-title">BCA Student</span>
+                <span class="badge-sub">Tech Explorer</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-left">
+              <div class="badge-icon-box" style="background: rgba(34, 197, 94, 0.15); color: #16a34a;">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <div class="badge-content">
+                <span class="badge-title">100% Mobile Fix</span>
+                <span class="badge-sub">60-120 FPS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-head-center reveal">
+        <span class="section-badge"><i class="fa-solid fa-user-astronaut"></i> Biography</span>
+        <h2 class="section-title">Beyond The Code, <span class="gradient-text">Into The Future</span></h2>
+        <p class="section-desc">Get to know the developer, the philosophy of vibe coding, and the drive behind the screen.</p>
+      </div>
+
+      <div class="about-grid">
+        
+        <!-- Interactive Terminal Card -->
+        <div class="about-visual-col reveal-left">
+          <div class="dev-terminal-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="terminal-title">pankaj@vibe-station: ~/identity</span>
+              <span class="terminal-badge">LIVE</span>
+            </div>
+
+            <div class="terminal-body">
+              <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">cat developer_info.json</span></div>
+              <pre class="t-code">{
+  <span class="t-key">"name"</span>: <span class="t-str">"Pankaj Kumar"</span>,
+  <span class="t-key">"education"</span>: <span class="t-str">"BCA (Computer Science)"</span>,
+  <span class="t-key">"style"</span>: <span class="t-str">"Vibe Coding &amp; Rapid Dev"</span>,
+  <span class="t-key">"location"</span>: <span class="t-str">"India 🇮🇳"</span>,
+  <span class="t-key">"status"</span>: <span class="t-str">"Available for Projects"</span>,
+  <span class="t-key">"philosophy"</span>: <span class="t-str">"Prompt Smart · Iterate Fast · Ship Clean"</span>
+}</pre>
+              <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">vibe-engine --status</span></div>
+              <div class="t-status">
+                <span class="t-ok">✔ AI Co-Pilots: Claude 3.7 &amp; GPT-4o</span><br />
+                <span class="t-ok">✔ GPU Acceleration: Active (60-120 FPS)</span><br />
+                <span class="t-ok">✔ Architecture: HTML5, Modern CSS3, ES6+</span>
+              </div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="terminal-stats-grid stagger">
+              <div class="t-stat-box reveal">
+                <span class="t-stat-number" data-target="10">0</span><span class="t-stat-plus">+</span>
+                <span class="t-stat-label">Projects Built</span>
+              </div>
+              <div class="t-stat-box reveal">
+                <span class="t-stat-number" data-target="6">0</span><span class="t-stat-plus">+</span>
+                <span class="t-stat-label">Courses Done</span>
+              </div>
+              <div class="t-stat-box reveal">
+                <span class="t-stat-number" data-target="100">0</span><span class="t-stat-plus">%</span>
+                <span class="t-stat-label">Vibe Energy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Content & Timeline -->
+        <div class="about-content-col reveal-right">
+          <div class="about-story-box">
+            <h3 class="about-headline">
+              A Passionate <span class="highlight-underline">BCA Coder</span> Building with Modern Speed
+            </h3>
+            
+            <p class="about-paragraph">
+              My journey began in the classroom with core programming fundamentals and expanded 
+              into cutting-edge <strong>AI-assisted development</strong>. I blend algorithmic logic with 
+              prompt engineering to build responsive, visually engaging web applications in record time.
             </p>
-            <div class="demo-features-pills">
-              <span><i class="fa-solid fa-check"></i> Responsive UI</span>
-              <span><i class="fa-solid fa-check"></i> 60fps Animations</span>
-              <span><i class="fa-solid fa-check"></i> Clean Code</span>
+
+            <div class="vibe-callout-card">
+              <div class="callout-icon">
+                <i class="fa-solid fa-bolt-lightning"></i>
+              </div>
+              <div class="callout-text">
+                <h4>What is Vibe Coding?</h4>
+                <p>
+                  It's prompt-driven, rapid iteration where AI amplifies creativity. Instead of getting bogged down in boilerplate, I focus on architecture, aesthetics, user experience, and real working solutions.
+                </p>
+              </div>
+            </div>
+
+            <h4 class="edu-title"><i class="fa-solid fa-award"></i> Education &amp; Milestones</h4>
+            <div class="timeline-container stagger">
+              <div class="timeline-item reveal">
+                <div class="t-dot"></div>
+                <div class="t-content">
+                  <div class="t-year">Present</div>
+                  <h5>Bachelor of Computer Applications (BCA)</h5>
+                  <p>In-depth study of algorithms, software engineering, databases, and modern programming.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item reveal">
+                <div class="t-dot"></div>
+                <div class="t-content">
+                  <div class="t-year">Completed</div>
+                  <h5>Modern Full-Stack Web Development</h5>
+                  <p>Mastered semantic HTML5, modern CSS3 animations, ES6+ JavaScript, and responsive design.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item reveal">
+                <div class="t-dot"></div>
+                <div class="t-content">
+                  <div class="t-year">Advanced</div>
+                  <h5>AI Prompt Engineering &amp; Vibe Architecture</h5>
+                  <p>Developing full web applications using Claude, ChatGPT, and automated dev tools.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS SECTION ==================== -->
+  <section id="skills" class="section bg-alt">
+    <div class="container">
+      <div class="section-head-center reveal">
+        <span class="section-badge"><i class="fa-solid fa-layer-group"></i> My Arsenal</span>
+        <h2 class="section-title">Skills &amp; <span class="gradient-text">Technologies</span></h2>
+        <p class="section-desc">The modern stack and AI toolset I use to turn conceptual designs into high-performance web realities.</p>
+      </div>
+
+      <div class="skills-grid-wrapper stagger">
+        <div class="skill-card reveal">
+          <div class="skill-icon-wrap" style="background: rgba(239, 68, 68, 0.1); color: #e44d26;">
+            <i class="fa-brands fa-html5"></i>
+          </div>
+          <h4>HTML5 Semantic</h4>
+          <span class="skill-tag">Structure &amp; SEO</span>
+          <div class="skill-bar-wrap"><div class="skill-bar" style="width: 95%;"></div></div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon-wrap" style="background: rgba(59, 130, 246, 0.1); color: #2563eb;">
+            <i class="fa-brands fa-css3-alt"></i>
+          </div>
+          <h4>CSS3 &amp; Flex/Grid</h4>
+          <span class="skill-tag">Animations &amp; Layouts</span>
+          <div class="skill-bar-wrap"><div class="skill-bar" style="width: 92%;"></div></div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon-wrap" style="background: rgba(234, 179, 8, 0.12); color: #ca8a04;">
+            <i class="fa-brands fa-js"></i>
+          </div>
+          <h4>JavaScript (ES6+)</h4>
+          <span class="skill-tag">DOM &amp; Async Logic</span>
+          <div class="skill-bar-wrap"><div class="skill-bar" style="width: 85%;"></div></div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon-wrap" style="background: rgba(6, 182, 212, 0.1); color: #0891b2;">
+            <i class="fa-brands fa-react"></i>
+          </div>
+          <h4>React.js</h4>
+          <span class="skill-tag">Component UI</span>
+          <div class="skill-bar-wrap"><div class="skill-bar" style="width: 78%;"></div></div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon-wrap" style="background: rgba(168, 85, 247, 0.1); color: #9333ea;">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h4>AI Prompt Dev</h4>
+          <span class="skill-tag">Vibe Architecture</span>
+          <div class="skill-bar-wrap"><div class="skill-bar" style="width: 96%;"></div></div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon-wrap" style="background: rgba(249, 115, 22, 0.1); color: #ea580c;">
+            <i class="fa-brands fa-git-alt"></i>
+          </div>
+          <h4>Git &amp; GitHub</h4>
+          <span class="skill-tag">Version Control</span>
+          <div class="skill-bar-wrap"><div class="skill-bar" style="width: 88%;"></div></div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon-wrap" style="background: rgba(16, 185, 129, 0.1); color: #059669;">
+            <i class="fa-solid fa-mobile-screen"></i>
+          </div>
+          <h4>Responsive Design</h4>
+          <span class="skill-tag">Mobile / Tablet / PC</span>
+          <div class="skill-bar-wrap"><div class="skill-bar" style="width: 95%;"></div></div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon-wrap" style="background: rgba(236, 72, 153, 0.1); color: #db2777;">
+            <i class="fa-brands fa-figma"></i>
+          </div>
+          <h4>UI/UX &amp; Figma</h4>
+          <span class="skill-tag">Design Systems</span>
+          <div class="skill-bar-wrap"><div class="skill-bar" style="width: 80%;"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DEVELOPER WORKFLOW SECTION ==================== -->
+  <section id="developer" class="section dark-section">
+    <div class="container">
+      <div class="section-head-center reveal">
+        <span class="section-badge badge-dark"><i class="fa-solid fa-microchip"></i> Inside The Engine</span>
+        <h2 class="section-title text-white">How I Build: <span class="gradient-text-alt">The Vibe Workflow</span></h2>
+        <p class="section-desc text-white-muted">The exact 5-step methodology that enables high speed development with zero compromise on quality.</p>
+      </div>
+
+      <div class="dev-workflow-grid">
+        <div class="workflow-col reveal-left">
+          <div class="wf-card">
+            <div class="wf-step-number">01</div>
+            <div class="wf-step-details">
+              <h4>🎯 Problem &amp; Architecture Spec</h4>
+              <p>Defining features, data flows, UI layouts, and user journeys before writing code.</p>
+            </div>
+          </div>
+
+          <div class="wf-card">
+            <div class="wf-step-number">02</div>
+            <div class="wf-step-details">
+              <h4>✍️ Prompt Engineering &amp; Wireframe</h4>
+              <p>Crafting high-precision prompts for AI assistants paired with Figma UI tokens.</p>
+            </div>
+          </div>
+
+          <div class="wf-card">
+            <div class="wf-step-number">03</div>
+            <div class="wf-step-details">
+              <h4>⚡ Rapid Vibe Coding Acceleration</h4>
+              <p>Co-piloting with Claude &amp; ChatGPT to generate modular, performant code.</p>
+            </div>
+          </div>
+
+          <div class="wf-card">
+            <div class="wf-step-number">04</div>
+            <div class="wf-step-details">
+              <h4>🧪 QA, Responsive &amp; 120 FPS Polish</h4>
+              <p>Fine-tuning hardware-accelerated animations, cross-device testing, and fixing edge cases.</p>
+            </div>
+          </div>
+
+          <div class="wf-card">
+            <div class="wf-step-number">05</div>
+            <div class="wf-step-details">
+              <h4>🚀 Production Ship &amp; CI/CD</h4>
+              <p>Deploying live to Vercel/Netlify/GitHub Pages with HTTPS and automated builds.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dev-tools-col reveal-right">
+          <div class="philosophy-box">
+            <div class="ph-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="ph-text">
+              "AI does not replace the developer — it supercharges the developer who knows how to ask the right questions."
+            </p>
+            <span class="ph-author">— Pankaj Kumar</span>
+          </div>
+
+          <div class="tooling-matrix-box">
+            <h4>Daily Stack &amp; Tools</h4>
+            <div class="tool-badges-wrap">
+              <span class="tool-pill"><i class="fa-solid fa-wand-magic-sparkles"></i> Claude 3.7</span>
+              <span class="tool-pill"><i class="fa-solid fa-robot"></i> ChatGPT-4o</span>
+              <span class="tool-pill"><i class="fa-solid fa-terminal"></i> VS Code</span>
+              <span class="tool-pill"><i class="fa-brands fa-github"></i> GitHub</span>
+              <span class="tool-pill"><i class="fa-brands fa-figma"></i> Figma</span>
+              <span class="tool-pill"><i class="fa-solid fa-triangle-circle-square"></i> Vercel</span>
+              <span class="tool-pill"><i class="fa-solid fa-cloud"></i> Netlify</span>
+              <span class="tool-pill"><i class="fa-brands fa-chrome"></i> DevTools</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="modal-footer">
-      <button class="btn btn-secondary" onclick="closeDemoModalDirect()">Close Preview</button>
-      <a href="#contact" class="btn btn-primary" onclick="closeDemoModalDirect()">Discuss This Project</a>
+  </section>
+
+  <!-- ==================== PROJECTS SECTION (HORIZONTAL SIDE-SCROLL CAROUSEL) ==================== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-head-center reveal">
+        <span class="section-badge"><i class="fa-solid fa-laptop-code"></i> Portfolio Work</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-desc">Hand-crafted digital products built with modern web technologies and AI-assisted workflows. Swipe horizontally or use navigation arrows.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="ai">AI &amp; Vibe Apps</button>
+        <button class="filter-btn" data-filter="web">Web Apps</button>
+        <button class="filter-btn" data-filter="ui">Landing Pages</button>
+      </div>
+
+      <!-- Carousel Navigation Header -->
+      <div class="carousel-controls-bar reveal">
+        <span class="carousel-hint"><i class="fa-solid fa-arrows-left-right"></i> Smooth Side-Scroll · 90-120 FPS</span>
+        <div class="carousel-btn-group">
+          <button class="c-nav-btn" id="carousel-prev" aria-label="Previous Project"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="c-nav-btn" id="carousel-next" aria-label="Next Project"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Horizontal Scrolling Track -->
+      <div class="carousel-outer-frame reveal">
+        <div class="projects-carousel-track" id="projects-track">
+          
+          <!-- Project 1 -->
+          <article class="project-card" data-category="ai">
+            <div class="project-thumb-frame">
+              <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&auto=format&fit=crop&q=80" alt="Portfolio Website Builder" loading="lazy" />
+              <div class="project-badge">AI Powered</div>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-heading">Portfolio Website Builder</h3>
+              <p class="project-summary">An intelligent site builder helping creators design stunning developer portfolios with automated layouts and preset components.</p>
+              <div class="project-tags">
+                <span class="ptag">React</span>
+                <span class="ptag">AI Tools</span>
+                <span class="ptag">CSS3</span>
+              </div>
+              <div class="project-btn-group">
+                <button class="pbtn pbtn-main" onclick="openDemoModal('Portfolio Website Builder', 'An AI-assisted personal portfolio generator designed with modular layout components.')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </button>
+                <a href="https://github.com/rizx0011/Pankajkumar" target="_blank" rel="noreferrer" class="pbtn pbtn-sec">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" data-category="web">
+            <div class="project-thumb-frame">
+              <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&auto=format&fit=crop&q=80" alt="Animated Task Manager" loading="lazy" />
+              <div class="project-badge">Productivity</div>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-heading">Animated To-Do &amp; Task Hub</h3>
+              <p class="project-summary">A high-satisfaction task tracker featuring micro-animations, priority categories, persistent local storage, and drag-to-reorder logic.</p>
+              <div class="project-tags">
+                <span class="ptag">JavaScript</span>
+                <span class="ptag">LocalStorage</span>
+                <span class="ptag">CSS Keyframes</span>
+              </div>
+              <div class="project-btn-group">
+                <button class="pbtn pbtn-main" onclick="openDemoModal('Animated To-Do App', 'A smooth interactive task manager with priority tags and localStorage persistence.')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </button>
+                <a href="https://github.com/rizx0011/Pankajkumar" target="_blank" rel="noreferrer" class="pbtn pbtn-sec">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Weather Dashboard -->
+          <article class="project-card" data-category="web">
+            <div class="project-thumb-frame">
+              <img src="https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&auto=format&fit=crop&q=80" alt="Live Weather Dashboard" loading="lazy" />
+              <div class="project-badge">API Integration</div>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-heading">Real-Time Weather Dashboard</h3>
+              <p class="project-summary">Interactive weather application fetching live temperature, atmospheric pressure, 5-day forecast, and dynamic animated weather cards.</p>
+              <div class="project-tags">
+                <span class="ptag">OpenWeather API</span>
+                <span class="ptag">Async/Await</span>
+                <span class="ptag">Responsive</span>
+              </div>
+              <div class="project-btn-group">
+                <button class="pbtn pbtn-main" onclick="openDemoModal('Weather Dashboard', 'Real-time weather station fetching live meteorological forecasts using OpenWeather API.')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </button>
+                <a href="https://github.com/rizx0011/Pankajkumar" target="_blank" rel="noreferrer" class="pbtn pbtn-sec">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card" data-category="ui">
+            <div class="project-thumb-frame">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80" alt="E-commerce Storefront" loading="lazy" />
+              <div class="project-badge">E-Commerce</div>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-heading">Modern E-Commerce Storefront</h3>
+              <p class="project-summary">High-converting landing page with interactive product filters, cart checkout drawer, smooth card transitions, and pixel-perfect responsiveness.</p>
+              <div class="project-tags">
+                <span class="ptag">HTML5 / CSS3</span>
+                <span class="ptag">UI/UX</span>
+                <span class="ptag">JavaScript</span>
+              </div>
+              <div class="project-btn-group">
+                <button class="pbtn pbtn-main" onclick="openDemoModal('E-commerce Storefront', 'Modern retail landing page with product cards and live cart interaction.')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </button>
+                <a href="https://github.com/rizx0011/Pankajkumar" target="_blank" rel="noreferrer" class="pbtn pbtn-sec">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card" data-category="ui">
+            <div class="project-thumb-frame">
+              <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop&q=80" alt="Gourmet Cafe Website" loading="lazy" />
+              <div class="project-badge">Business Web</div>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-heading">Gourmet Café &amp; Dining Site</h3>
+              <p class="project-summary">Warm, inviting restaurant website featuring a dynamic menu showcase, table reservation booking form, and interactive gallery reveals.</p>
+              <div class="project-tags">
+                <span class="ptag">Vanilla CSS</span>
+                <span class="ptag">JavaScript</span>
+                <span class="ptag">Form Validation</span>
+              </div>
+              <div class="project-btn-group">
+                <button class="pbtn pbtn-main" onclick="openDemoModal('Gourmet Cafe Site', 'Restaurant web experience with animated menu categories and table booking.')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </button>
+                <a href="https://github.com/rizx0011/Pankajkumar" target="_blank" rel="noreferrer" class="pbtn pbtn-sec">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project-card" data-category="ai">
+            <div class="project-thumb-frame">
+              <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80" alt="AI Chat Companion UI" loading="lazy" />
+              <div class="project-badge">AI Interface</div>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-heading">AI Chat Companion Interface</h3>
+              <p class="project-summary">Sleek conversational assistant interface with typing indicators, markdown message formatting, history drawer, and dark/light themes.</p>
+              <div class="project-tags">
+                <span class="ptag">AI Integration</span>
+                <span class="ptag">Glassmorphism</span>
+                <span class="ptag">JavaScript</span>
+              </div>
+              <div class="project-btn-group">
+                <button class="pbtn pbtn-main" onclick="openDemoModal('AI Chat Companion', 'Intelligent conversational chat UI with streaming responses and typing simulation.')">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </button>
+                <a href="https://github.com/rizx0011/Pankajkumar" target="_blank" rel="noreferrer" class="pbtn pbtn-sec">
+                  <i class="fa-brands fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Pagination dots -->
+      <div class="carousel-pagination" id="carousel-dots"></div>
+
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS SECTION ==================== -->
+  <section id="testimonials" class="section bg-alt">
+    <div class="container">
+      <div class="section-head-center reveal">
+        <span class="section-badge"><i class="fa-solid fa-comments"></i> Endorsements</span>
+        <h2 class="section-title">What Mentors &amp; <span class="gradient-text">Clients Say</span></h2>
+        <p class="section-desc">Feedback on work ethic, delivery speed, and clean modern execution.</p>
+      </div>
+
+      <div class="testimonials-grid stagger">
+        <div class="testimonial-card reveal">
+          <div class="quote-mark"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="quote-text">
+            "Pankaj built our business landing page in record time. The animations are buttery smooth, and his vibe coding approach allowed us to iterate on design changes instantly."
+          </p>
+          <div class="author-box">
+            <div class="author-avatar" style="background: linear-gradient(135deg, #b45309, #d97706);">R</div>
+            <div>
+              <h5 class="author-name">Rahul Sharma</h5>
+              <span class="author-role">Small Business Founder</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="quote-mark"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="quote-text">
+            "As a BCA student, Pankaj displays an exceptional ability to leverage modern AI tools without losing grip of core coding principles. Highly recommended!"
+          </p>
+          <div class="author-box">
+            <div class="author-avatar" style="background: linear-gradient(135deg, #0d9488, #059669);">P</div>
+            <div>
+              <h5 class="author-name">Priya Verma</h5>
+              <span class="author-role">Academic Mentor</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="quote-mark"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="quote-text">
+            "The design sensibility and responsiveness of his projects are remarkable. He has a sharp eye for visual details, font hierarchy, and smooth micro-interactions."
+          </p>
+          <div class="author-box">
+            <div class="author-avatar" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">A</div>
+            <div>
+              <h5 class="author-name">Amit Patel</h5>
+              <span class="author-role">Frontend Tech Lead</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-card-wrapper">
+        <div class="contact-grid">
+          
+          <!-- Contact Info -->
+          <div class="contact-info-col reveal-left">
+            <span class="section-badge"><i class="fa-solid fa-envelope-open-text"></i> Reach Out</span>
+            <h2 class="contact-title">Let's Build Something <span class="gradient-text">Exceptional</span></h2>
+            <p class="contact-subtext">
+              Have a project idea, website requirement, freelance gig, or just want to discuss vibe coding? 
+              Drop me a message and I'll get back to you promptly.
+            </p>
+
+            <div class="contact-links-list">
+              <a href="mailto:pankajdoopga@gmail.com" class="c-link-item">
+                <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="c-info">
+                  <span class="c-label">Direct Email</span>
+                  <span class="c-value">pankajdoopga@gmail.com</span>
+                </div>
+              </a>
+
+              <div class="c-link-item">
+                <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="c-info">
+                  <span class="c-label">Location</span>
+                  <span class="c-value">India 🇮🇳 · Remote Worldwide</span>
+                </div>
+              </div>
+
+              <div class="c-link-item">
+                <div class="c-icon"><i class="fa-solid fa-clock"></i></div>
+                <div class="c-info">
+                  <span class="c-label">Typical Response</span>
+                  <span class="c-value">Under 24 Hours</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-connect-bar">
+              <span class="sc-title">Connect With Me:</span>
+              <div class="sc-links">
+                <a href="mailto:pankajdoopga@gmail.com" class="sc-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/rizx0011/Pankajkumar" target="_blank" rel="noreferrer" class="sc-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="sc-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://instagram.com" target="_blank" rel="noreferrer" class="sc-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-col reveal-right">
+            <form id="contact-form" class="custom-contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="form-name">Your Full Name <span class="req">*</span></label>
+                  <div class="input-wrap">
+                    <i class="fa-solid fa-user field-icon"></i>
+                    <input type="text" id="form-name" placeholder="Pankaj Kumar" required />
+                  </div>
+                </div>
+
+                <div class="form-field">
+                  <label for="form-email">Your Email Address <span class="req">*</span></label>
+                  <div class="input-wrap">
+                    <i class="fa-solid fa-envelope field-icon"></i>
+                    <input type="email" id="form-email" placeholder="name@example.com" required />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="form-subject">Project Topic / Subject</label>
+                <div class="input-wrap">
+                  <i class="fa-solid fa-tag field-icon"></i>
+                  <input type="text" id="form-subject" placeholder="Website Project / Vibe Collaboration" />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="form-message">Your Message <span class="req">*</span></label>
+                <div class="input-wrap">
+                  <textarea id="form-message" rows="5" placeholder="Describe your project, timeline, or what you'd like to collaborate on..." required></textarea>
+                </div>
+              </div>
+
+              <div id="form-status-box"></div>
+
+              <button type="submit" id="form-submit-btn" class="btn btn-primary btn-block">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        
+        <div class="footer-brand-col">
+          <a href="#hero" class="footer-logo">
+            <div class="logo-box"><i class="fa-solid fa-code"></i></div>
+            <span>PK<span class="logo-accent">.dev</span></span>
+          </a>
+          <p class="footer-about-text">
+            Pankaj Kumar — BCA Student &amp; Vibe Coder. Building the digital future with rapid AI-assisted workflows and modern design systems.
+          </p>
+          <div class="created-by-badge">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span>Crafted &amp; Designed by <strong>Sumit Sain</strong></span>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h5 class="f-col-title">Navigation</h5>
+          <ul class="f-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Tech Stack</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#developer">Vibe Workflow</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h5 class="f-col-title">Featured Work</h5>
+          <ul class="f-links">
+            <li><a href="#projects">Portfolio Builder</a></li>
+            <li><a href="#projects">Weather Station</a></li>
+            <li><a href="#projects">Task Hub App</a></li>
+            <li><a href="#projects">E-Commerce Store</a></li>
+            <li><a href="#projects">AI Assistant UI</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h5 class="f-col-title">Get In Touch</h5>
+          <div class="footer-contact-info">
+            <a href="mailto:pankajdoopga@gmail.com" class="f-contact-link">
+              <i class="fa-solid fa-envelope"></i> pankajdoopga@gmail.com
+            </a>
+            <span class="f-status-text"><span class="f-dot"></span> Open for Opportunities</span>
+          </div>
+          <div class="f-social-icons">
+            <a href="mailto:pankajdoopga@gmail.com" class="f-icon" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/rizx0011/Pankajkumar" target="_blank" rel="noreferrer" class="f-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="f-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" class="f-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="f-copyright">
+          <p>© 2026 <strong>Pankaj Kumar</strong>. All Rights Reserved.</p>
+          <p class="creator-credit">Designed &amp; Developed with ❤️ by <strong>Sumit Sain</strong></p>
+        </div>
+
+        <button id="back-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Scroll back to top">
+          <span>Back to Top</span>
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== DEMO MODAL POPUP ==================== -->
+  <div id="demo-modal" class="modal-overlay" onclick="closeDemoModal(event)">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-laptop-code modal-icon"></i>
+          <h3 id="modal-project-title">Project Live Demo</h3>
+        </div>
+        <button class="modal-close-btn" onclick="closeDemoModalDirect()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-screen-preview">
+          <div class="simulated-browser-bar">
+            <span class="s-dot s-red"></span>
+            <span class="s-dot s-yellow"></span>
+            <span class="s-dot s-green"></span>
+            <span class="s-url" id="modal-url">https://pankaj-vibe-apps.dev/live-demo</span>
+          </div>
+          <div class="simulated-app-frame" id="modal-app-frame">
+            <div class="demo-live-preview-content">
+              <i class="fa-solid fa-circle-check" style="font-size: 2.5rem; color: #16a34a; margin-bottom: 12px;"></i>
+              <h4 id="modal-project-subhead">Project Ready for Live Preview</h4>
+              <p id="modal-project-desc" style="color: #64748b; font-size: 0.95rem; max-width: 440px; margin: 8px auto 20px;">
+                This project has been built using modern responsive components and AI vibe architecture.
+              </p>
+              <div class="demo-features-pills">
+                <span><i class="fa-solid fa-check"></i> Responsive UI</span>
+                <span><i class="fa-solid fa-check"></i> 120 FPS Polish</span>
+                <span><i class="fa-solid fa-check"></i> Clean Code</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeDemoModalDirect()">Close Preview</button>
+        <a href="#contact" class="btn btn-primary" onclick="closeDemoModalDirect()">Discuss This Project</a>
+      </div>
     </div>
   </div>
-</div>
 
-<script src="main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
